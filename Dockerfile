@@ -10,4 +10,4 @@ ADD . /data
 
 WORKDIR /data
 
-CMD cd /data; ruby app.rb -p 5000
+CMD cd /data; ruby app.rb -p $PORT
