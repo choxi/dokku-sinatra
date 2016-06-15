@@ -9,5 +9,3 @@ VOLUME ["/data"]
 ADD . /data
 
 WORKDIR /data
-
-CMD cd /data; ruby app.rb -p $PORT
