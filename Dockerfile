@@ -3,5 +3,11 @@ FROM ruby
 
 RUN gem install sinatra
 
-# Define default command.
-CMD ["bash"]
+
+VOLUME ["/data"]
+
+ADD . /data
+
+WORKDIR /data
+
+CMD cd /data; ruby app.rb -p $PORT
