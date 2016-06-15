@@ -1,20 +1,7 @@
-#
-# Ruby Dockerfile
-#
-# https://github.com/dockerfile/ruby
-#
-
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ruby
 
-# Install Ruby.
-RUN \
-  apt-get update && \
-  apt-get install -y ruby ruby-dev ruby-bundler && \
-  rm -rf /var/lib/apt/lists/*
-
-# Define working directory.
-WORKDIR /data
+RUN gem install sinatra
 
 # Define default command.
 CMD ["bash"]
