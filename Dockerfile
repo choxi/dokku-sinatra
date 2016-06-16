@@ -12,4 +12,4 @@ WORKDIR /data
 
 EXPOSE 5000
 
-CMD ruby app.rb -p $PORT
+CMD ruby app.rb -o 0.0.0.0 -p $PORT
