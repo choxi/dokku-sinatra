@@ -2,6 +2,7 @@
 FROM ruby
 
 RUN gem install sinatra
+RUN gem install rspec
 
 
 VOLUME ["/data"]
