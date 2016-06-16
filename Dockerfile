@@ -10,6 +10,4 @@ ADD . /data
 
 WORKDIR /data
 
-EXPOSE 5000
-
 CMD ruby app.rb -o 0.0.0.0 -p $PORT
