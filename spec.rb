@@ -1,7 +1,7 @@
-require File.join(File.expand_path(File.dirname(__FILE__)), "app")
-
 require "rspec"
 require "rack/test"
+require "./log_formatter"
+require "./app"
 
 describe "App" do
   include Rack::Test::Methods

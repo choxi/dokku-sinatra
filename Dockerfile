@@ -1,14 +1,9 @@
 # Pull base image.
 FROM ruby
 
-RUN gem install sinatra
-RUN gem install rspec
-
-
-VOLUME ["/data"]
-
-ADD . /data
-
-WORKDIR /data
+VOLUME    ["/data"]
+ADD       . /data
+WORKDIR   /data
+RUN       bundle install
 
 CMD ruby app.rb -o 0.0.0.0 -p $PORT
