@@ -3,11 +3,11 @@ require File.join(File.expand_path(File.dirname(__FILE__)), "app")
 require "rspec"
 require "rack/test"
 
-describe App do
+describe "App" do
   include Rack::Test::Methods
 
   def app
-    App.new
+    Sinatra::Application
   end
 
   it "says hello" do
